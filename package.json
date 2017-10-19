@@ -1,35 +1,46 @@
 {
-    "name": "markdown-tistory-vs-plugin",
-    "displayName": "markdown-tistory-vs-plugin",
-    "description": "Markdown post to Tistory.com",
-    "version": "0.0.1",
-    "publisher": "jojoldu",
-    "engines": {
-        "vscode": "^1.17.0"
-    },
-    "categories": [
-        "Other"
+  "name": "markdown-tistory-vs-plugin",
+  "displayName": "markdown-tistory-vs-plugin",
+  "description": "Markdown post to Tistory.com",
+  "version": "0.0.1",
+  "publisher": "jojoldu",
+  "engines": {
+    "vscode": "^1.17.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onCommand:extension.sayHello"
+  ],
+  "main": "./extension",
+  "contributes": {
+    "commands": [
+      {
+        "command": "extension.sayHello",
+        "title": "Hello World"
+      }
     ],
-    "activationEvents": [
-        "onCommand:extension.sayHello"
-    ],
-    "main": "./extension",
-    "contributes": {
-        "commands": [{
+    "keybindings":[
+        {
             "command": "extension.sayHello",
-            "title": "Hello World"
-        }]
-    },
-    "scripts": {
-        "postinstall": "node ./node_modules/vscode/bin/install",
-        "test": "node ./node_modules/vscode/bin/test"
-    },
-    "devDependencies": {
-        "typescript": "^2.5.2",
-        "vscode": "^1.1.5",
-        "mocha": "^3.5.0",
-        "eslint": "^4.6.1",
-        "@types/node": "^7.0.0",
-        "@types/mocha": "^2.2.42"
-    }
+            "key": "ctrl+m t"
+        }
+    ]
+  },
+  "scripts": {
+    "postinstall": "node ./node_modules/vscode/bin/install",
+    "test": "node ./node_modules/vscode/bin/test"
+  },
+  "devDependencies": {
+    "typescript": "^2.5.2",
+    "vscode": "^1.1.5",
+    "mocha": "^3.5.0",
+    "eslint": "^4.6.1",
+    "@types/node": "^7.0.0",
+    "@types/mocha": "^2.2.42"
+  },
+  "dependencies": {
+    "markdown-tistory": "^0.1.1"
+  }
 }
