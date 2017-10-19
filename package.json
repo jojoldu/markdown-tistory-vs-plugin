@@ -24,7 +24,7 @@
     "keybindings":[
         {
             "command": "extension.sayHello",
-            "key": "ctrl+m t"
+            "key": "alt+0"
         }
     ]
   },
